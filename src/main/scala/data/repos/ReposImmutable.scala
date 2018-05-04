@@ -7,7 +7,7 @@ import scalaz._, Scalaz._
 import services._, services.ViewData._, java.sql.Timestamp
 
 import data.immutable._
-import org.hablapps.puretest.RaiseError
+import puretest.RaiseError
 
 class NetworkRepoImmutable[P[_]](implicit
   M: MonadState[P,Network],

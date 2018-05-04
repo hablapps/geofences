@@ -9,7 +9,7 @@ import doobie.imports._
 import services._, ViewData._, java.sql.Timestamp
 import data.doobieImpl.Schemas._
 
-import org.hablapps.puretest._, scalatestImpl._
+import puretest._, scalatestImpl._
 
 class AllDoobieSpecs extends services.test.scalatest.AllSpecs[ConnectionIO](
   AllDoobieSpecs.HError,

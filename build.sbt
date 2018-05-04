@@ -18,21 +18,16 @@ parallelExecution in Test := false
 scalacOptions ++= Seq(
   "-Ypartial-unification")
 
-resolvers ++= Seq(
-  "Habla repo - releases" at "http://repo.hablapps.com/releases",
-  Resolver.sonatypeRepo("snapshots"))
-
 libraryDependencies ++= Seq(
-  "com.chuusai"  %% "shapeless" % shapelessVersion,
   "org.scalaz" %% "scalaz-core" % "7.2.8",
   "org.tpolecat" %% "doobie-core"       % doobieVersion,
   "org.tpolecat" %% "doobie-postgres"   % doobieVersion,
   "org.tpolecat" %% "doobie-scalatest"  % doobieVersion,
-  "org.hablapps" %% "puretest-scalaz" % "0.3.1",
-  "org.http4s" %% "http4s-dsl" % "0.18.0-SNAPSHOT",
-  "org.http4s" %% "http4s-blaze-server" % "0.18.0-SNAPSHOT",
-  "org.http4s" %% "http4s-blaze-client" % "0.18.0-SNAPSHOT",
-  "org.http4s" %% "http4s-circe" % "0.18.0-SNAPSHOT",
+  "org.hablapps" %% "puretest-scalaz" % "0.3.2",
+  "org.http4s" %% "http4s-dsl" % "0.18.0",
+  "org.http4s" %% "http4s-blaze-server" % "0.18.0",
+  "org.http4s" %% "http4s-blaze-client" % "0.18.0",
+  "org.http4s" %% "http4s-circe" % "0.18.0",
   "io.circe" %% "circe-generic" % "0.9.0-M2",
   "io.circe" %% "circe-literal" % "0.9.0-M2",
   "ch.qos.logback" %  "logback-classic" % "1.2.3" % "runtime")

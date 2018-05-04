@@ -3,7 +3,7 @@ package services
 package test
 
 import scalaz._, Scalaz._
-import org.hablapps.puretest._
+import puretest._
 import services._, ViewData._, java.sql.Timestamp
 
 trait AtSpec[P[_]] extends FunSpec[P]{

@@ -16,10 +16,9 @@ trait System[P[_]]{
       at.toList.traverse{
         case (did,pos,time) => DeviceView.at(did,pos,time)
       }
-
     }
 
-  def run[T](p: P[T])(implicit M: Monad[P]): P[T] =
+  def run[T](p: => P[T])(implicit M: Monad[P]): P[T] =
     init >> p >>! { _ => dispose}
 }
 

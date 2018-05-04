@@ -4,7 +4,7 @@ package test
 package scalatest
 import scalaz._, Scalaz._
 
-import org.hablapps.puretest._
+import puretest._
 
 class AdminSpec[P[_]](
   val M: Monad[P],

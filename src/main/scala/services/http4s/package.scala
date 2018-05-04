@@ -23,7 +23,7 @@ package object http4sImpl{
   import io.circe._
   import io.circe.generic.auto._
 
-  import org.hablapps.puretest.HandleError
+  import puretest.HandleError
 
   trait ToHttpResponse[F[_],E] extends Http4sDsl[F]{
     def toHttpResponse[A: Encoder](

@@ -5,7 +5,7 @@ package test
 import scalaz._, Scalaz._
 import services._, ViewData._, java.sql.Timestamp
 
-import org.hablapps.puretest._
+import puretest._
 
 trait AdminSpec[P[_]] extends FunSpec[P]{
   implicit val Sys: System[P]

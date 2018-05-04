@@ -17,7 +17,7 @@ import scala.concurrent._
 import scala.concurrent.duration._
 import io.circe.generic.auto._
 import io.circe.syntax._
-import org.hablapps.puretest.HandleError
+import puretest.HandleError
 
 class HttpSystemService[F[_]](
   system: System[F])(implicit
@@ -26,7 +26,7 @@ class HttpSystemService[F[_]](
 ) extends ToHttpResponse[F,System.Error] {
 
   def service(implicit scheduler: Scheduler,
-      executionContext: ExecutionContext = ExecutionContext.global): HttpService[F] =
+      executionContext: ExecutionContext): HttpService[F] =
     Router[F](
       "/" -> rootHttpService,
       "/admin" -> (new HttpAdminService(system.AdminView)).service,
@@ -50,7 +50,8 @@ object HttpNetworkService{
   class App[F[_]](
     system: System[F])(implicit
     E: Effect[F],
-    HE: HandleError[F,System.Error]
+    HE: HandleError[F,System.Error],
+    executionContext: ExecutionContext
   ) extends StreamApp[F] {
 
     def stream(args: List[String], requestShutdown: F[Unit]): Stream[F, ExitCode] =

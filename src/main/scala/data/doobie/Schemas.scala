@@ -4,7 +4,6 @@ package data
 package doobieImpl
 
 import scalaz._, Scalaz._
-import shapeless._
 import doobie.imports._
 import org.postgresql.geometric._
 import doobie.postgres.imports._

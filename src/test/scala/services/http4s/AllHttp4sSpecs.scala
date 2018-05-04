@@ -8,7 +8,7 @@ import cats.effect.IO
 import org.http4s._
 
 import services._, ViewData._, java.sql.Timestamp
-import org.hablapps.puretest._, scalatestImpl._
+import puretest._, scalatestImpl._
 
 class AllHttp4sSpecs extends services.test.scalatest.AllSpecs[IO](
   AllHttp4sSpecs.HError,

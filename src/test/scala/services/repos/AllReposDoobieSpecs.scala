@@ -3,7 +3,7 @@ package services
 package repos
 package test
 
-import org.hablapps.puretest._, scalatestImpl._
+import puretest._, scalatestImpl._
 import doobie.imports.ConnectionIO
 
 class AllReposDoobieSpecs extends services.test.scalatest.AllSpecs(

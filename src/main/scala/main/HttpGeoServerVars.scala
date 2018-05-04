@@ -9,12 +9,13 @@ import scalaz._, Scalaz._
 import services.ViewData._, data.immutable._
 
 import services._, services.repos._, data.repos._
-import org.hablapps.puretest.{RaiseError, HandleError}
+import puretest.{RaiseError, HandleError}
 
 object HttpNetworkServerVars extends HttpNetworkService.App[IO](
   IOSystem.apply)(
   implicitly,
-  IOSystem.HandleSystemError
+  IOSystem.HandleSystemError,
+  scala.concurrent.ExecutionContext.global
 )
 
 object IOSystem{

@@ -8,7 +8,7 @@ import scalaz._, Scalaz._
 import services._, ViewData._, java.sql.Timestamp
 
 import org.scalatest._
-import org.hablapps.puretest._
+import puretest._
 
 import data.immutable._
 import data.repos.NetworkRepoImmutable

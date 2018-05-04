@@ -25,7 +25,7 @@ import io.circe.syntax._
 import io.circe.generic.auto._
 
 import ViewData._
-import org.hablapps.puretest.HandleError
+import puretest.HandleError
 
 
 class HttpDeviceService[F[_]: Effect](DeviceView: DeviceView[F])(implicit
